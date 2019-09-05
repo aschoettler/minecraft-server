@@ -1,5 +1,21 @@
 # Permissions
 
+key:
+    _   unspecified
+    e   everyone
+            participate
+            dont grief
+            be nice
+    v   verified
+            do normal/power-user stuff
+            WE in build
+    a   admin
+            administration
+            /give anywhere
+            /op, /ban, promote to member
+    g   god
+            god-tier
+            
 
 
 | permission                                       | Level | desciription                                                                                                                                                       |
