@@ -2,7 +2,6 @@
 
 ```
 key:
-        unspecified
     e   everyone
             participate
             dont grief
