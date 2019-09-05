@@ -1,7 +1,8 @@
 # Permissions
 
+```
 key:
-    _   unspecified
+        unspecified
     e   everyone
             participate
             dont grief
@@ -9,12 +10,14 @@ key:
     v   verified
             do normal/power-user stuff
             WE in build
+    v+  allowed for verified users for the most part but maybe world-dependant.
     a   admin
             administration
             /give anywhere
             /op, /ban, promote to member
     g   god
             god-tier
+```
             
 
 
