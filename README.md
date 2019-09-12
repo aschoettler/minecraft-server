@@ -1,4 +1,4 @@
-# minecraft-server
+# Minecraft Server
 My personal minecraft server customization materials
 
 # Links for Mods:
@@ -24,21 +24,3 @@ For teleporting between worlds with custom portals
 For changing permissions
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Be sure to check out [my notes](./notes.md) for more info on mods
