@@ -6,6 +6,24 @@ My personal minecraft server customization materials
 ## [FAWE](https://github.com/IntellectualSites/FastAsyncWorldEdit-1.13/wiki/Commands) (Fast Asynchronus WorldEdit)
 For teraforming, constructing shapes, and building giant structures
 * [Patterns for brushes](https://github.com/IntellectualSites/FastAsyncWorldEdit-1.13/wiki/Main-Commands-and-Permissions#patterns)
+### Some Links:
+FAWE Brushes, Splines & Constructions
+    * [Basics - video](https://www.youtube.com/watch?v=Fj4DBoWp1ZQ)
+    * [some info](https://www.planetminecraft.com/blog/fawe-tutorial/)
+    * [A Youtube video](https://www.youtube.com/watch?v=Fj4DBoWp1ZQ)
+    * [another video](https://www.youtube.com/watch?v=MzeNE4gVf70)
+    * [brushes-commands](https://github.com/IntellectualSites/FastAsyncWorldEdit-1.13/wiki/Commands#brush-commands-edittop)
+    * [brushes-intro](https://github.com/IntellectualSites/FastAsyncWorldEdit-1.13/wiki/Brushes)
+Masks:
+  * [FAWE Patterns](https://github.com/boy0001/FastAsyncWorldedit/wiki/Commands#patterns-edittop)
+Building:
+* [mountains](https://www.youtube.com/watch?v=qkiTO_4iCBI)
+  * [another method](https://escaperestart.com/forum/threads/guide-make-mountains-with-worldedit.5456/)
+Some specific commands:
+  - Fully plant a farm:
+    - `//replacenear 30 0&>[farmland] potatoes[age=7]`
+    
+
 
 
 ## [EssentialsX](https://essinfo.xeya.me/index.php?page=commands)
