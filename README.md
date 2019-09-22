@@ -1,6 +1,17 @@
 # Minecraft Server
 My personal minecraft server customization materials
 
+# WELCOME!
+There are **multiple servers** you can connect to. Use `/server` to see them and click any server name to connect to it.
+
+Within each server there can be **multiple worlds**. Use the multiverse command `/mv list` to see them.
+
+To **switch worlds**:
+- walk through a multiverse portal that goes there
+- right-click a multiverse sign
+- OR use the command `/mv tp w:<worldname>` so for example `/mv tp w:home` will take you to the `home` world on the creative server.
+
+
 # Links for Mods:
 
 ## [FAWE](https://github.com/IntellectualSites/FastAsyncWorldEdit-1.13/wiki/Commands) (Fast Asynchronus WorldEdit)
