@@ -1,18 +1,20 @@
 key:
-    e   everyone
+    e   default
             participate
             dont grief
             be nice
-    v   verified
+    v   member
             do normal/power-user stuff
             WE in build
-    v+  allowed for verified users for the most part but maybe world-dependant.
     a   admin
             administration
             /give anywhere
             /op, /ban, promote to member
     g   god
             god-tier
+    x/y world-dependant: x for free-style worlds & y for survival.
+
+
 
 | permission                                       | Level | desciription                                                                                                                                                       |
 | ------------------------------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -85,7 +87,7 @@ key:
 | essentials.firework.multiple                     | e     | Allows to spawn multiple firework effects at once                                                                                                                  |
 | essentials.fly                                   | v/g   | Allow access to the /fly command.                                                                                                                                  |
 | essentials.fly.safelogin                         | v     | Players with this command will automatically switch to fly mode if they login whilst floating in the air.                                                          |
-| essentials.gamemode                              | v/a   | Allow access to the /gamemode command.                                                                                                                             | # config any gm for everyone in free world |
+| essentials.gamemode                              | v/a   | Allow access to the /gamemode command.                                                                                                                             | # config any gm for default in free world |
 | essentials.gamemode.all                          | v/a   | Allow access to all the gamemodes in the /gamemode command                                                                                                         |
 | essentials.gamemode.others                       | a     | Allows you to change the gamemode of other players.                                                                                                                |
 | essentials.gc                                    | v     | Allow access to the /gc command.                                                                                                                                   |
@@ -114,8 +116,6 @@ key:
 | essentials.invsee.preventmodify                  | a     | Prevents other players from modifying the players inventory.                                                                                                       |
 | essentials.item                                  | a     | Allow access to the /item command.                                                                                                                                 |
 | essentials.itemdb                                | e     | Allows access to the /itemdb command.                                                                                                                              |
-| essentials.itemspawn.exempt                      | g     | Allows spawning of items on the spawn blacklist.                                                                                                                   |
-| essentials.itemspawn.item-all                    | a     | If permission-based-item-spawn: Spawn all items.                                                                                                                   |
 | essentials.jail.exempt                           | a     | Prevents a specified group or player from being jailed                                                                                                             |
 | essentials.jails                                 | e     | Allow access to the /jails command.                                                                                                                                |
 | essentials.joinfullserver                        | a     | Player can join when the server is full.                                                                                                                           |
@@ -271,8 +271,8 @@ key:
 | essentials.unban                                 | a     | Allow access to the /unban command.                                                                                                                                |
 | essentials.unbanip                               | a     | Allow access to the /unbanip command.                                                                                                                              |
 | essentials.unlimited                             | g     | Allow access to the /unlimited command.                                                                                                                            |
-| essentials.unlimited.item-all                    | v     | Allows the player to recieve an unlimited stack of any item.                                                                                                       | # v.free, a.survival                       |
-| essentials.unlimited.item-bucket                 | v     | Allows the player to recieve an unlimited use of empty/lava/water buckets.                                                                                         | # v.free, a.survival                       |
+| essentials.unlimited.item-all                    | v     | Allows the player to recieve an unlimited stack of any item.                                                                                                       | # v.free, a.survival                      |
+| essentials.unlimited.item-bucket                 | v     | Allows the player to recieve an unlimited use of empty/lava/water buckets.                                                                                         | # v.free, a.survival                      |
 | essentials.unlimited.others                      | g     | Allows the player to gift/remove another player with an unlimited stack.                                                                                           |
 | essentials.vanish                                | g     | Allow access to the /vanish command.                                                                                                                               |
 | essentials.vanish.pvp                            | g     | Allows players who are vanished to attack other players.                                                                                                           |
@@ -346,14 +346,13 @@ key:
 | essentials.signs.use.trade                       | e     | Controls who can use trade signs.                                                                                                                                  |
 | essentials.signs.use.warp                        | e     | Controls who can use warp signs.                                                                                                                                   |
 | essentials.signs.use.weather                     | v     | Controls who can use weather signs.                                                                                                                                |
-| essentials.itemspawn.meta-chapter-[chapter]      | ??    | Allow access to the Allows spawning of specific books only, from book.txt./give command.                                                                           |
 | essentials.afk.auto                              | e     | Players with this permission will be set to afk after a period of inaction as defined in the config file.                                                          |
 | essentials.afk.kickexempt                        | a     | Exempts the user from being auto kicked for AFK                                                                                                                    |
 | essentials.help.[pluginname]                     | e     | Manually adds the commands from a plugin to this group's /help. Name is all lowercase.                                                                             |
 | essentials.help.[pluginname].[command]           | e     | Manually adds a command from a plugin to this group's /help. Name is all lowercase.                                                                                |
 | essentials.jail.allow.&lt;command&gt;            | v     | Allows essentials commands to be used while jailed (requires regular perm).                                                                                        |
 | essentials.kits.*                                | v     | Allows access to all created kits                                                                                                                                  |
-| essentials.kits.[kitname]                        | e     | Give access to a single kit, where [kitname] is the name of an existing kit.                                                                                       | ## Check later                             |
+| essentials.kits.[kitname]                        | e     | Give access to a single kit, where [kitname] is the name of an existing kit.                                                                                       | ## Check later                            |
 | essentials.sethome.multiple.[set name]           | v     | Raise the multiple home limit to a setting defined in the config file.                                                                                             |
 | essentials.spawner.*                             | g     | Allows the spawning of all mobs                                                                                                                                    |
 | essentials.spawner.[mob]                         |       | Allows access to spawn a specific mob                                                                                                                              |
@@ -364,19 +363,10 @@ key:
 | essentials.warp.overwrite.*                      |       | Allows overwriting of all existing warps.                                                                                                                          |
 | essentials.warp.overwrite.[warpname]             |       | Allows overwriting of existing warps.                                                                                                                              |
 | essentials.warps.*                               |       | Allows access to all warps.                                                                                                                                        |
-| essentials.warps.[warpname]                      |       | If you have per-warp-permission set to true in the config.yml then you can limit what warps players can use. This also controls what players would see with /warp. | ## config?                                 |
-| essentials.worlds.&lt;worldname&gt;              |       | Allows players access to a specific world.                                                                                                                         | # world access                             |
+| essentials.warps.[warpname]                      |       | If you have per-warp-permission set to true in the config.yml then you can limit what warps players can use. This also controls what players would see with /warp. | ## config?                                |
+| essentials.worlds.&lt;worldname&gt;              |       | Allows players access to a specific world.                                                                                                                         | # world access                            |
 | essentials.ban.notify                            | a     | Players with this permission will receive a notification when an IP ban is removed.                                                                                |
 | essentials.enchantments.[enchantmentname]        |       | Allows access to each enchantment type.                                                                                                                            |
-| essentials.itemspawn.item-&lt;itemname&gt;       |       | If permission-based-item-spawn: Spawn &lt;itemname&gt;                                                                                                             |
-| essentials.itemspawn.item-[itemid]               |       | If permission-based-item-spawn: Spawn [itemid]                                                                                                                     |
-| essentials.itemspawn.item-[itemname]             |       | If permission-based-item-spawn: Spawn [itemname]                                                                                                                   |
-| essentials.itemspawn.meta-author                 | ??    | Allow 'author' meta to be used in item spawning.                                                                                                                   |
-| essentials.itemspawn.meta-book                   | a     | Allows spawning of books with pre-filled content from books.txt                                                                                                    |
-| essentials.itemspawn.meta-firework               | a     | Allow specific meta for fireworks.                                                                                                                                 |
-| essentials.itemspawn.meta-head                   | a     | Allows spawning of mob heads.                                                                                                                                      |
-| essentials.itemspawn.meta-lore                   | v     | Allow 'lore' meta to be used in item spawning.                                                                                                                     |
-| essentials.itemspawn.meta-title                  | v     | Allow 'title' meta to be used in item spawning.                                                                                                                    |
 | essentials.vanish.effect                         | g     | Allow adding potion effects when someone goes into vanish                                                                                                          |
 | essentials.vanish.interact                       | g     | Allow interacting with vanished players                                                                                                                            |
 | essentials.back.into.&lt;worldname&gt;           | e*    | Allows access to /back when the destination location is within the specified world                                                                                 |
@@ -398,41 +388,125 @@ key:
 | essentials.home                                  | e     | Allows access to the /home command                                                                                                                                 |
 | essentials.balancetop.exclude                    | 0     | Players with this permission are excluded from the balancetop                                                                                                      |
 
+<!-- | essentials.itemspawn.exempt                      | g     | Allows spawning of items on the spawn blacklist.                                                                                                                   | -->
+<!-- | essentials.itemspawn.item-all                    | a     | If permission-based-item-spawn: Spawn all items.                                                                                                                   | -->
+<!-- | essentials.itemspawn.meta-chapter-[chapter]      | ??    | Allow access to the Allows spawning of specific books only, from book.txt./give command.                                                                           | -->
+<!-- | essentials.itemspawn.item-&lt;itemname&gt;       |       | If permission-based-item-spawn: Spawn &lt;itemname&gt;                                                                                                             | -->
+<!-- | essentials.itemspawn.item-[itemid]               |       | If permission-based-item-spawn: Spawn [itemid]                                                                                                                     | -->
+<!-- | essentials.itemspawn.item-[itemname]             |       | If permission-based-item-spawn: Spawn [itemname]                                                                                                                   | -->
+<!-- | essentials.itemspawn.meta-author                 | ??    | Allow 'author' meta to be used in item spawning.                                                                                                                   | -->
+<!-- | essentials.itemspawn.meta-book                   | a     | Allows spawning of books with pre-filled content from books.txt                                                                                                    | -->
+<!-- | essentials.itemspawn.meta-firework               | a     | Allow specific meta for fireworks.                                                                                                                                 | -->
+<!-- | essentials.itemspawn.meta-head                   | a     | Allows spawning of mob heads.                                                                                                                                      | -->
+<!-- | essentials.itemspawn.meta-lore                   | v     | Allow 'lore' meta to be used in item spawning.                                                                                                                     | -->
+<!-- | essentials.itemspawn.meta-title                  | v     | Allow 'title' meta to be used in item spawning.                                                                                                                    | -->
 
-<!-- | essentials.signs.break.balance                   | v                               | Controls who can break balance signs.                                                                                                                              | -->
-<!-- | essentials.signs.break.buy                       | v                               | Controls who can break buy signs.                                                                                                                                  | -->
-<!-- | essentials.signs.break.disposal                  | v                               | Controls who can break disposal signs.                                                                                                                             | -->
-<!-- | essentials.signs.break.enchant                   | v                               | Controls who can break enchant signs.                                                                                                                              | -->
-<!-- | essentials.signs.break.free                      | v                               | Controls who can break free signs.                                                                                                                                 | -->
-<!-- | essentials.signs.break.gamemode                  | v                               | Controls who can break gamemode signs.                                                                                                                             | -->
-<!-- | essentials.signs.break.heal                      | v                               | Controls who can break heal signs.                                                                                                                                 | -->
-<!-- | essentials.signs.break.info                      | v                               | Controls who can break info signs.                                                                                                                                 | -->
-<!-- | essentials.signs.break.kit                       | v                               | Controls who can break kit signs.                                                                                                                                  | -->
-<!-- | essentials.signs.break.mail                      | v                               | Controls who can break a mail sign.                                                                                                                                | -->
-<!-- | essentials.signs.break.protection                | v                               | Controls who can break a protection sign. Typically given to everybody.                                                                                            | -->
-<!-- | essentials.signs.break.repair                    | v                               | Controls who can break repair signs.                                                                                                                               | -->
-<!-- | essentials.signs.break.sell                      | v                               | Controls who can break sell signs.                                                                                                                                 | -->
-<!-- | essentials.signs.break.spawnmob                  | v                               | Controls who can break spawnmob signs.                                                                                                                             | -->
-<!-- | essentials.signs.break.time                      | v                               | Controls who can break time signs.                                                                                                                                 | -->
-<!-- | essentials.signs.break.trade                     | v                               | Controls who can break trade signs.                                                                                                                                | -->
-<!-- | essentials.signs.break.warp                      | v                               | Controls who can break warp signs.                                                                                                                                 | -->
-<!-- | essentials.signs.break.weather                   | v                               | Controls who can break weather signs.                                                                                                                              | --> 
 
-<!-- | essentials.signs.create.balance                  | a                               | Controls who can create balance signs.                                                                                                                             | -->
-<!-- | essentials.signs.create.buy                      | a                               | Controls who can create buy signs.                                                                                                                                 | -->
-<!-- | essentials.signs.create.disposal                 | a                               | Controls who can create disposal signs.                                                                                                                            | -->
-<!-- | essentials.signs.create.enchant                  | a                               | Controls who can create enchant signs.                                                                                                                             | -->
-<!-- | essentials.signs.create.free                     | a                               | Controls who can create free signs.                                                                                                                                | -->
-<!-- | essentials.signs.create.gamemode                 | a                               | Controls who can create gamemode signs.                                                                                                                            | -->
-<!-- | essentials.signs.create.heal                     | a                               | Controls who can create heal signs.                                                                                                                                | -->
-<!-- | essentials.signs.create.info                     | a                               | Controls who can create info signs.                                                                                                                                | -->
-<!-- | essentials.signs.create.kit                      | a                               | Controls who can create kit signs.                                                                                                                                 | -->
-<!-- | essentials.signs.create.mail                     | a                               | Controls who can create a mail sign.                                                                                                                               | -->
-<!-- | essentials.signs.create.protection               | a                               | Controls who can create a protection sign.                                                                                                                         | -->
-<!-- | essentials.signs.create.repair                   | a                               | Controls who can create repair signs.                                                                                                                              | -->
-<!-- | essentials.signs.create.sell                     | a                               | Controls who can create sell signs.                                                                                                                                | -->
-<!-- | essentials.signs.create.spawnmob                 | a                               | Controls who can create spawnmob signs.                                                                                                                            | -->
-<!-- | essentials.signs.create.time                     | a                               | Controls who can create time signs.                                                                                                                                | -->
-<!-- | essentials.signs.create.trade                    | a                               | Controls who can create trade signs.                                                                                                                               | -->
-<!-- | essentials.signs.create.warp                     | a                               | Controls who can create warp signs.                                                                                                                                | -->
-<!-- | essentials.signs.create.weather                  | a                               | Controls who can create weather signs.                                                                                                                             | -->                                    | -->
+
+World-Dependant perms:
+
+| permission                         | Free | Surv | desciription                                               |
+| ---------------------------------- | ---- | ---- | ---------------------------------------------------------- |
+| essentials.fireball                | v    | a    | Allow access to the /fireball command.                     |
+| essentials.firework                | v    | a    | Allow access to the /firework command.                     |
+| essentials.fly                     | v    | g    | Allow access to the /fly command.                          |
+| essentials.gamemode                | v    | a    | Allow access to the /gamemode command.                     | # config any gm for default in free world |
+| essentials.gamemode.all            | v    | a    | Allow access to all the gamemodes in the /gamemode command |
+| essentials.potion.apply            | a    | g    | Allow access to the /potion apply command                  |
+| essentials.powertool               | v    | a    | Allow access to the /powertool command.                    |
+| essentials.powertool.append        | v    | a    | Allows adding multiple commands to a single powertool.     |
+| essentials.protect.exemptbreak     | v    | a    | Allows a player to ignore the break blacklist.             |
+| essentials.protect.exemptplacement | v    | a    | Allows a player to ignore the block placement blacklist.   |
+| essentials.protect.exemptusage     | v    | a    | Allows a player to ignore the usage blacklist.             |
+| essentials.speed                   | v    | g    | Allow access to the /speed command.                        |
+| essentials.tree                    | e    | v    | Allow access to the /tree command.                         |
+
+SURVIVAL                                                      FREE
+essentials.tree                    | member                 || essentials.tree                    | default
+essentials.fireball                | admin                  || essentials.fireball                | member
+essentials.firework                | admin                  || essentials.firework                | member
+essentials.gamemode                | admin                  || essentials.gamemode                | member        # Config for whatever worlds
+essentials.gamemode.all            | admin                  || essentials.gamemode.all            | member
+essentials.powertool               | admin                  || essentials.powertool               | member
+essentials.powertool.append        | admin                  || essentials.powertool.append        | member
+essentials.protect.exemptbreak     | admin                  || essentials.protect.exemptbreak     | member
+essentials.protect.exemptplacement | admin                  || essentials.protect.exemptplacement | member
+essentials.protect.exemptusage     | admin                  || essentials.protect.exemptusage     | member
+essentials.potion.apply            | god                    || essentials.potion.apply            | admin
+essentials.fly                     | god                    || essentials.fly                     | member
+essentials.speed                   | god                    || essentials.speed                   | member
+
+
+
+```yml
+
+groups:
+  member:
+    inheritance:
+    - default
+    context:
+      freebuild:
+        permissions:
+        - essentials.fireball
+        - essentials.firework
+        - essentials.fly
+        - essentials.gamemode
+        - essentials.gamemode.all
+        - essentials.powertool
+        - essentials.powertool.append
+        - essentials.protect.exemptbreak
+        - essentials.protect.
+        - essentials.protect.exemptusage
+        - essentials.speed
+
+
+
+permissions:
+  essentials.permpack.default:
+  
+
+
+```
+
+
+
+
+
+
+```yml
+  default:
+  - essentials.tree
+  member:
+  - essentials.fireball
+  - essentials.firework
+  - essentials.fly
+  - essentials.gamemode
+  - essentials.gamemode.all
+  - essentials.powertool
+  - essentials.powertool.append
+  - essentials.protect.exemptbreak
+  - essentials.protect.
+  - essentials.protect.exemptusage
+  - essentials.speed
+  admin:
+  - essentials.potion.apply
+
+essentials.permpack.survival:
+  member:
+  - essentials.tree
+  admin:
+  - essentials.fireball
+  - essentials.firework
+  - essentials.gamemode
+  - essentials.gamemode.all
+  - essentials.powertool
+  - essentials.powertool.append
+  - essentials.protect.exemptbreak
+  - essentials.protect.
+  - essentials.protect.exemptusage
+  god:
+  - essentials.potion.apply
+  - essentials.fly
+  - essentials.speed
+```
+
