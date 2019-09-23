@@ -39,6 +39,8 @@ Some specific commands:
 
 
 ## [EssentialsX](https://essinfo.xeya.me/index.php?page=commands)
+- **Use kits to get tools:** `/kit tools`
+- List warp points: `/warps`, make a new warp point with `/setwarp <name>` and use it with `/warp <name>`
 For TP commands, creating/using kits, warp points, and more
 * [Some fancy signs](https://wiki.mc-ess.net/wiki/Sign_Tutorial) you can make
 
@@ -46,11 +48,19 @@ For TP commands, creating/using kits, warp points, and more
 ## [Multiverse 2](https://github.com/Multiverse/Multiverse-Core/wiki)
 For teleporting between worlds with custom portals
 * [How to make a portal](https://github.com/Multiverse/Multiverse-Core/wiki/Basics-%28Portals%29)
+* [Clickable Sign Portals](https://github.com/Multiverse/Multiverse-Core/wiki/Sign-style-(SignPortals))
 * [Nether Portals](https://github.com/Multiverse/Multiverse-Core/wiki/Portal-style-(SignPortals))
-* [Sign Portals](https://github.com/Multiverse/Multiverse-Core/wiki/Sign-style-(SignPortals))
 
 
 ## [LuckPerms](https://github.com/lucko/LuckPerms/wiki/Command-Usage)
-For changing permissions
+For changing permissions (Moderators & admins only)
+- Promote rank: `/lp user <username> promote rank`
+- grant member rank: `/lp user <username> parent set member`
 
 
+
+## [CoreProtect](http://minerealm.com/community/viewtopic.php?f=32&t=6781&p=82240) 
+Hopefully not necessary - this plugin can detect stealing and griefing by tracking all block changes and can undo any user's actions.
+
+Some useful commands:
+- `/co i` to switch to inspection mode
